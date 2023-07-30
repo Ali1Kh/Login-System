@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <link rel="shortcut icon" href="imgs/login.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="vh-100 d-flex justify-content-center align-items-center">
+        <div class="inner text-white rounded-4 overflow-hidden shadow">
+            <!-- ?Login -->
+            <div class="login d-block p-5 text-center">
+                <h1 class="mb-5  fw-bold">Smart Login System</h1>
+                <div class="inputs">
+                    <input id="emailIn"
+                        class="form-control text-white mb-4 p-2 bg-transparent rounded-1 border border-1 border-white"
+                        type="email" placeholder="Enter your email">
+                    <input id="passIn"
+                        class="form-control text-white mb-4 p-2 bg-transparent rounded-1 border border-1 border-white"
+                        type="password" placeholder="Enter your password">
+                        <small id="loginHint" class="pt-3 fs-6 d-none"></small>
+                    <button id="loginBtn" class="myBtn btn w-100 my-4">Login</button>
+                    <p>Don't have an account? <a id="signUp" class="cursorPointer text-decoration-underline">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+            <!-- ?Sign Up -->
+            <div class="signUp d-none p-5 shadow  text-center">
+                <h1 class="mb-5 fw-bold">Smart Login System</h1>
+                <div class="inputs d-flex flex-column">
+                    <input id="name"
+                        class="form-control text-white mt-3 p-2 bg-transparent rounded-1 border border-1 border-white"
+                        type="text" placeholder="Enter your Name">
+                        <small id="nameHint" class="text-start pt-1 d-none">Inavild!</small>
+                    <input id="emailUp"
+                        class="form-control text-white mt-3 p-2 bg-transparent rounded-1 border border-1 border-white"
+                        type="email" placeholder="Enter your Email">
+                        <small id="emailHint" class="text-start pt-1 d-none">Inavild!</small>
+                    <input id="passUp"
+                        class="form-control text-white mt-3 p-2 bg-transparent rounded-1 border border-1 border-white"
+                        type="password" placeholder="Enter your Password">
+                        <small id="passHint" class="text-start pt-1 d-none">Inavild!</small>
+                    <input id="rePass"
+                        class="form-control text-white mt-3 p-2 bg-transparent rounded-1 border border-1 border-white"
+                        type="password" placeholder="Confirm Password">
+                        <small id="rePassHint" class="text-start pt-1 d-none">Inavild!</small>
+                    <button id="signUpBtn" class="myBtn btn w-100 mt-4">Sign Up</button>
+                    <small id="mainHint" class="pt-3 fs-6 d-none">Please Fill All Inputs!</small>
+                    <p class="mt-3">Already have an account? <a id="signInPage" class="cursorPointer text-decoration-underline">Sign
+                            In</a></p>
+                </div>
+            </div>
+            <!-- ?Welcome Page -->
+            <div class="logoutPage d-none p-5 shadow  text-center">
+                <h1 id="welcomeText" class="fst-italic"></h1>
+                <button id="logoutBtn" class="btn btn-warning mt-4">Log Out</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
