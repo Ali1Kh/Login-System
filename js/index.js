@@ -39,6 +39,7 @@ function login() {
   for (let i = 0; i < singUpList.length; i++) {
     if ( emailIn.value == singUpList[i].email && passIn.value == singUpList[i].pass) {
       welcomePage(singUpList[i].name);
+      document.getElementById("loginHint").classList.replace("d-block","d-none");
     } else if (emailIn.value != singUpList[i].email) {
       document.getElementById("loginHint").innerHTML =
         "Please Enter a Vaild Email";
@@ -50,10 +51,6 @@ function login() {
       document
         .getElementById("loginHint")
         .classList.replace("d-none", "d-block");
-    } else {
-      document
-        .getElementById("loginHint")
-        .classList.replace("d-block", "d-none");
     }
   }
 }
