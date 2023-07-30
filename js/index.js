@@ -36,8 +36,9 @@ function signUp() {
 document.getElementById("signUpBtn").addEventListener("click", signUp);
 //!Login
 function login() {
+  if(emailIn.value != "" && passIn.value != ""){
   for (let i = 0; i < singUpList.length; i++) {
-    if ( emailIn.value == singUpList[i].email && passIn.value == singUpList[i].pass) {
+    if (emailIn.value == singUpList[i].email && passIn.value == singUpList[i].pass) {
       welcomePage(singUpList[i].name);
       document.getElementById("loginHint").classList.replace("d-block","d-none");
     } else if (emailIn.value != singUpList[i].email) {
@@ -53,6 +54,12 @@ function login() {
         .classList.replace("d-none", "d-block");
     }
   }
+}else{
+  document.getElementById("loginHint").innerHTML = "PLease Fill all Inputs";
+  document
+    .getElementById("loginHint")
+    .classList.replace("d-none", "d-block");
+}
 }
 document.getElementById("loginBtn").addEventListener("click", login);
 // !Welcome Page
