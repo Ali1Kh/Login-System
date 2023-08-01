@@ -30,6 +30,8 @@ function signUp() {
     singUpList.push(userInfo);
     localStorage.setItem("usersList", JSON.stringify(singUpList));
     clear();
+    emailIn.value = userInfo.email;
+    passIn.value = userInfo.pass; 
     signInPage();
   }
 }
@@ -82,8 +84,6 @@ function signUpPage() {
 function signInPage() {
   document.querySelector(".signUp").classList.replace("d-block", "d-none");
   document.querySelector(".login").classList.replace("d-none", "d-block");
-  emailIn.value = userInfo.email;
-  passIn.value = userInfo.pass;
 }
 document.getElementById("signInPage").addEventListener("click", signInPage);
 document.getElementById("signUp").addEventListener("click", signUpPage);
