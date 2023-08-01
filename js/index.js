@@ -17,11 +17,11 @@ let userInfo;
 // !LocalStorage
 if (localStorage.getItem("usersList")) {
   singUpList = JSON.parse(localStorage.getItem("usersList"));
-  console.log(singUpList);
 }
 // !Sign Up
 function signUp() {
-  if (checkFill() && validateName() && validateEmail() && validatePass() && validateRePass()) {
+  console.log(duplicatedEmail());
+  if (checkFill() && validateName() && validateEmail() && validatePass() && validateRePass() && duplicatedEmail()) {
     userInfo = {
       name: username.value,
       email: emailUp.value,
@@ -124,10 +124,10 @@ function duplicatedEmail() {
     emailUp.classList.remove("is-valid");
     emailHint.innerHTML = "This Email is elready exits";
     emailHint.classList.replace("d-none", "d-block");
-  }else if(emailUp.value!=singUpList[i].email && validateEmail()) {
-    emailUp.classList.replace("is-invalid", "is-valid");
-    emailHint.classList.replace("d-block", "d-none");
-  }}
+    return false;
+  }
+}
+return true;
 }
 emailUp.addEventListener("keyup", duplicatedEmail);
 //? Check Pass
