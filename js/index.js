@@ -20,7 +20,6 @@ if (localStorage.getItem("usersList")) {
 }
 // !Sign Up
 function signUp() {
-  console.log(duplicatedEmail());
   if (checkFill() && validateName() && validateEmail() && validatePass() && validateRePass() && duplicatedEmail()) {
     userInfo = {
       name: username.value,
